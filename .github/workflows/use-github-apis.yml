@@ -16,7 +16,7 @@ jobs:
       - uses: actions/github-script@v6
         id: create-issue
         with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
+          github-token: ${{secrets.secret}}
           script: |
             const result = await github.rest.issues.create({
               owner: context.repo.owner,
